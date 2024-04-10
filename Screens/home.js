@@ -33,7 +33,7 @@ export default function Home() {
 
     client.on("message", function (topic, message) {
       settemp(parseFloat(message.toString()));
-      //arrays de la grafica
+      //arrays de las graficas
       cont = cont + 1;
       setx_axis((x_axis) => [...x_axis, cont]);
       sety_axis((y_axis) => [...x_axis, parseFloat(message.toString())]);
@@ -64,7 +64,7 @@ export default function Home() {
           backgroundColor: "#000",
           backgroundGradientFrom: "#000",
           backgroundGradientTo: "#000",
-          decimalPlaces: 2, // optional, defaults to 2dp
+          decimalPlaces: 2, //optional, defaults to  2dp
           color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
           labelColor: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
           style: {
